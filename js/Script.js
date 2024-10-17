@@ -21,6 +21,9 @@ const backgroundGround = "linear-gradient(to bottom, #623400, #a77f42, #593100)"
 const backgroundPsychic = "linear-gradient(to bottom, #c23bd5, #580670, #8a338f)";
 const backgroundFairy = "linear-gradient(to bottom, #ff6ff9, #c901bc, #ac067e)";
 const backgroundFighting = "linear-gradient(to bottom, #ff8983, #ff3030, #ff613e)";
+const backgroundIce = "linear-gradient(to bottom, #39dff1, #299cb5, #46ede4)";
+const backgroundRock = "linear-gradient(to bottom, #995304, #c78504, #8f4e00)";
+const backgroundSteel = "linear-gradient(to bottom, #6a6765, #b6b3ae, #61605f)";
 
 let searchPokemon = 1;
 
@@ -87,7 +90,13 @@ const type = data.types.map((typeInfo) => typeInfo.type.name);
     document.body.style.backgroundImage = backgroundFairy;
   } else if (type.includes ("fighting")) {
     document.body.style.backgroundImage = backgroundFighting;
-  }
+  } else if (type.includes("ice")) {
+    document.body.style.backgroundImage = backgroundIce;
+  } else if (type.includes("rock")) {
+    document.body.style.backgroundImage = backgroundRock;
+  }  else if (type.includes("steel")) {
+    document.body.style.backgroundImage = backgroundSteel;
+  }  
   else {
     document.body.style.backgroundImage = backgroundDefault; 
   }
